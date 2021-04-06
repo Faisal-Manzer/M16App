@@ -6,7 +6,11 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
+    "studio": "studio android",
+    "xcode": "xed -b ios",
+    "pod": "cd ios && pod install",
     "test": "jest",
+    "clean": "watchman watch-del-all && find . -name 'node_modules' -type d -prune -exec rm -rf '{}' + && rm -rf ios/Pods",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {

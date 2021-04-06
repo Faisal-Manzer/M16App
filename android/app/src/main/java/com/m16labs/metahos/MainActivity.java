@@ -1,4 +1,4 @@
-package com.metahos;
+package com.m16labs.metahos;
 
 import com.facebook.react.ReactActivity;
 
