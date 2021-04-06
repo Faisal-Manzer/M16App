@@ -11,6 +11,7 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		3A8FE468261D1B810009F691 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8FE467261D1B810009F691 /* BootSplash.storyboard */; };
 		448F1297D36A2AC4DA654C2F /* libPods-metahos-metahosTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A03EEAFB21AF5B501E4CE3C /* libPods-metahos-metahosTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		F2FD9B004D81B149CAA424FB /* libPods-metahos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 329C4D5C35A989F97F2D70F9 /* libPods-metahos.a */; };
@@ -39,6 +40,7 @@
 		19DF0119D45084E70E993A8F /* Pods-metahos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-metahos.release.xcconfig"; path = "Target Support Files/Pods-metahos/Pods-metahos.release.xcconfig"; sourceTree = "<group>"; };
 		329C4D5C35A989F97F2D70F9 /* libPods-metahos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-metahos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33714326EF6DE5E804C85708 /* Pods-metahos-metahosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-metahos-metahosTests.release.xcconfig"; path = "Target Support Files/Pods-metahos-metahosTests/Pods-metahos-metahosTests.release.xcconfig"; sourceTree = "<group>"; };
+		3A8FE467261D1B810009F691 /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = metahos/BootSplash.storyboard; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = metahos/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A03EEAFB21AF5B501E4CE3C /* libPods-metahos-metahosTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-metahos-metahosTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABC1CDB76243FA7BBDA0962F /* Pods-metahos-metahosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-metahos-metahosTests.debug.xcconfig"; path = "Target Support Files/Pods-metahos-metahosTests/Pods-metahos-metahosTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
+				3A8FE467261D1B810009F691 /* BootSplash.storyboard */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
@@ -242,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A8FE468261D1B810009F691 /* BootSplash.storyboard in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
