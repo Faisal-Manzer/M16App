@@ -29,6 +29,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import RNBootSplash from 'react-native-bootsplash';
+import Analytics from 'appcenter-analytics';
 
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
@@ -135,6 +136,7 @@ const Stack = createStackNavigator();
 const App = () => {
   React.useEffect(() => {
     RNBootSplash.hide({fade: true});
+    Analytics.trackEvent('App Opened');
   }, []);
 
   return (
