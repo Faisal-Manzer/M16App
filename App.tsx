@@ -30,6 +30,7 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import RNBootSplash from 'react-native-bootsplash';
 import Analytics from 'appcenter-analytics';
+import AppCenter from 'appcenter';
 
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
@@ -137,6 +138,9 @@ const App = () => {
   React.useEffect(() => {
     RNBootSplash.hide({fade: true});
     Analytics.trackEvent('App Opened');
+    AppCenter.isEnabled().then(enabled =>
+      console.log(`App center enabled: ${enabled}`),
+    );
   }, []);
 
   return (
