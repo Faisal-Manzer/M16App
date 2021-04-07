@@ -8,6 +8,7 @@
  * @format
  */
 
+import 'react-native-gesture-handler';
 import React from 'react';
 import {
   SafeAreaView,
@@ -17,6 +18,7 @@ import {
   Text,
   useColorScheme,
   View,
+  Button,
 } from 'react-native';
 
 import {
@@ -27,6 +29,9 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import RNBootSplash from 'react-native-bootsplash';
+
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
 
 const Section: React.FC<{
   title: string;
@@ -56,12 +61,8 @@ const Section: React.FC<{
   );
 };
 
-const App = () => {
+const HomeScreen = ({navigation}) => {
   const isDarkMode = useColorScheme() === 'dark';
-
-  React.useEffect(() => {
-    RNBootSplash.hide({fade: true});
-  }, []);
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
@@ -78,6 +79,10 @@ const App = () => {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
+          <Button
+            title="Go to Details"
+            onPress={() => navigation.navigate('Hello')}
+          />
           <Section title="Step One">
             Edit <Text style={styles.highlight}>App.js</Text> to change this
             screen and then come back to see your edits.
@@ -95,6 +100,54 @@ const App = () => {
         </View>
       </ScrollView>
     </SafeAreaView>
+  );
+};
+
+const HelloScreen = ({}) => {
+  const isDarkMode = useColorScheme() === 'dark';
+
+  const backgroundStyle = {
+    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+  };
+
+  return (
+    <SafeAreaView style={backgroundStyle}>
+      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+      <ScrollView
+        contentInsetAdjustmentBehavior="automatic"
+        style={backgroundStyle}>
+        <Header />
+        <View
+          style={{
+            backgroundColor: isDarkMode ? Colors.black : Colors.white,
+          }}>
+          <Section title="Step One">
+            <Text style={styles.highlight}>Hello Navigator</Text>
+          </Section>
+        </View>
+      </ScrollView>
+    </SafeAreaView>
+  );
+};
+
+const Stack = createStackNavigator();
+
+const App = () => {
+  React.useEffect(() => {
+    RNBootSplash.hide({fade: true});
+  }, []);
+
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home">
+          {props => <HomeScreen {...props} />}
+        </Stack.Screen>
+        <Stack.Screen name="Hello">
+          {props => <HelloScreen {...props} />}
+        </Stack.Screen>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 
