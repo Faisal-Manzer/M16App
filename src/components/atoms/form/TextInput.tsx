@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { TextInput as RNTextInput, TextInputProps } from 'react-native';
 
-import { c } from 'helpers';
+import { t } from 'helpers';
 import { getColor } from 'helpers/tailwind';
 import { ClassName } from 'interfaces/application';
 
@@ -14,7 +14,7 @@ interface Props extends TextInputProps {
 
 const styles = {
   input: (focused: boolean, disabled: boolean) =>
-    c('text-xl', 'py-2', 'border-b-2', {
+    t('text-xl', 'py-2', 'border-b-2', {
       'border-app-light': focused && !disabled,
       'border-gray-300': !focused && !disabled,
       'border-gray-200': disabled,
@@ -48,7 +48,7 @@ const TextInput: React.FC<Props> = ({
     <RNTextInput
       onFocus={onFocusHandler}
       onBlur={onBlurHandler}
-      style={{ ...styles.input(focused, disabled), ...c(className) }}
+      style={{ ...styles.input(focused, disabled), ...t(className) }}
       placeholderTextColor={getColor('gray-400')}
       {...disabledProps}
       {...extra}

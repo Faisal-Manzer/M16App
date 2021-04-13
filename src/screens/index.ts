@@ -1,3 +1,3 @@
-import HomeScreen from './HomeScreen';
+import HomeScreen from './LoginScreen';
 
 export { HomeScreen };

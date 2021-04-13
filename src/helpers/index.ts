@@ -1,3 +1,3 @@
-import c from './tailwind';
+import { t, c } from './tailwind';
 
-export { c };
+export { t, c };

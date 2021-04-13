@@ -7,7 +7,8 @@ import styles from '../../styles.json';
 
 const { tailwind, getColor } = create(styles);
 
-const c = (...classes: ClassName[]) => tailwind(classNames(...classes));
+const c = classNames;
+const t = (...classes: ClassName[]) => tailwind(c(...classes));
 
-export { c, tailwind, getColor };
-export default c;
+export { t, c, tailwind, getColor };
+export default t;

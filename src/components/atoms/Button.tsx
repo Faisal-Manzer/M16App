@@ -1,7 +1,7 @@
 import React from 'react';
 import { TouchableOpacity } from 'react-native';
 
-import { c } from 'helpers';
+import { t } from 'helpers';
 import { ClassName } from 'interfaces/application';
 
 export interface Props {
@@ -10,14 +10,14 @@ export interface Props {
 }
 
 const styles = {
-  container: c('bg-app-light', 'px-3', 'py-1', 'rounded-full'),
+  container: t('bg-app-light', 'px-3', 'py-1', 'rounded-full'),
 };
 
 const Button: React.FC<Props> = ({ children, onPress, className = '' }) => (
   <TouchableOpacity
     activeOpacity={0.95}
     onPress={onPress}
-    style={{ ...styles.container, ...c(className) }}
+    style={{ ...styles.container, ...t(className) }}
   >
     {children}
   </TouchableOpacity>

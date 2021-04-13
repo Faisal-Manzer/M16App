@@ -60,7 +60,10 @@
     "no-console": [
       "off"
     ],
-    "indent": "warn",
+    "indent": [
+      "warn",
+      2
+    ],
     "no-unused-vars": "warn",
     "no-param-reassign": "off",
     "no-async-promise-executor": "warn",

@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { View as RNView, KeyboardAvoidingView, Platform } from 'react-native';
 
-import { c } from 'helpers';
+import { t } from 'helpers';
 import { ClassName } from 'interfaces/application';
 
 interface Props {
@@ -10,7 +10,7 @@ interface Props {
 }
 
 const styles = {
-  container: c(),
+  container: t(),
 };
 
 const keyboardVerticalOffset = Platform.OS === 'ios' ? 40 : 0;
@@ -25,7 +25,7 @@ const View: React.FC<Props> = ({ children, className = '', keyboard = false }) =
   );
 
   return (
-    <MainView style={{ ...styles.container, ...c(className) }} {...extraProps}>
+    <MainView style={{ ...styles.container, ...t(className) }} {...extraProps}>
       {children}
     </MainView>
   );

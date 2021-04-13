@@ -5,6 +5,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 import { Button } from 'components/atoms';
 import { Props as ButtonProps } from 'components/atoms/Button';
+import { c } from 'helpers';
 
 interface Props extends ButtonProps {
   className?: ClassName;
@@ -13,10 +14,10 @@ interface Props extends ButtonProps {
 
 const RoundedButton: React.FC<Props> = ({ children, icon, className = '', ...extraProps }) => (
   <Button
-    className={`rounded-full w-16 h-16 flex justify-center items-center ${className}`}
+    className={c('rounded-full w-16 h-16 flex justify-center items-center', className)}
     {...extraProps}
   >
-    {icon && <Icon name={icon} size={30} color='#FFF' />}
+    {icon && <Icon name={icon} size={25} color='#FFF' />}
     {children}
   </Button>
 );

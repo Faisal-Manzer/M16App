@@ -1,20 +1,16 @@
 import React from 'react';
-import { Text } from 'react-native';
 
-import { c } from 'helpers';
 import { ClassName } from 'interfaces/application';
+import Text from 'components/atoms/typography/Text';
+import { c } from 'helpers';
 
 interface Props {
   onPress?: () => void;
   className?: ClassName;
 }
 
-const styles = {
-  container: c('text-app', 'text-4xl'),
-};
-
 const ScreenTitle: React.FC<Props> = ({ children, className = '' }) => (
-  <Text style={{ ...styles.container, ...c(className) }}>{children}</Text>
+  <Text className={c('text-app', 'text-4xl', className)}>{children}</Text>
 );
 
 export default ScreenTitle;
