@@ -21,6 +21,7 @@ module.exports = {
           'components': './src/components',
           'interfaces': './src/interfaces',
           'helpers': './src/helpers',
+          'assets': './src/assets',
         },
       },
     ],

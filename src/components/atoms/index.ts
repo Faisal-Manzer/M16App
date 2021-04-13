@@ -1,3 +1,5 @@
 import Button from "./Button";
+import View from './View';
 
-export { Button };
+
+export { Button, View };

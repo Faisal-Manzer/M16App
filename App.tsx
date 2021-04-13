@@ -1,6 +1,7 @@
 import React from "react";
 import "react-native-gesture-handler";
 
+import { StatusBar } from "react-native";
 import Analytics from "appcenter-analytics";
 import AppCenter from "appcenter";
 import codePush from "react-native-code-push";
@@ -24,9 +25,10 @@ const App = () => {
 
   return (
     <Provider store={store}>
+      <StatusBar barStyle='dark-content' />
       <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen name="Home">{(props) => <HomeScreen {...props} />}</Stack.Screen>
+        <Stack.Navigator initialRouteName='Home' screenOptions={{ headerShown: false }}>
+          <Stack.Screen name='Home'>{(props) => <HomeScreen {...props} />}</Stack.Screen>
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>
