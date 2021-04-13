@@ -13,13 +13,13 @@ const styles = {
   container: c(),
 };
 
+const keyboardVerticalOffset = Platform.OS === 'ios' ? 40 : 0;
+
 const View: React.FC<Props> = ({ children, className = '', keyboard = false }) => {
   const { MainView, extraProps } = useMemo(
     () => ({
       MainView: keyboard ? KeyboardAvoidingView : RNView,
-      extraProps: keyboard
-        ? { behaviour: 'padding', keyboardVerticalOffset: Platform.OS === 'ios' ? 40 : 0 }
-        : {},
+      extraProps: keyboard ? { behaviour: 'padding', keyboardVerticalOffset } : {},
     }),
     [keyboard],
   );

@@ -1,8 +1,8 @@
-import React from "react";
-import { Text } from "react-native";
+import React from 'react';
+import { Text } from 'react-native';
 
-import { c } from "helpers";
-import { ClassName } from "interfaces/application";
+import { c } from 'helpers';
+import { ClassName } from 'interfaces/application';
 
 interface Props {
   onPress?: () => void;
@@ -10,15 +10,11 @@ interface Props {
 }
 
 const styles = {
-  container: c( "text-gray-700", "text-lg")
+  container: c('text-gray-700', 'text-lg'),
 };
 
-const Subtitle: React.FC<Props> = ({ children, className = "" }) => {
-  return (
-    <Text style={{ ...styles.container, ...c(className) }}>
-      {children}
-    </Text>
-  );
-};
+const Subtitle: React.FC<Props> = ({ children, className = '' }) => (
+  <Text style={{ ...styles.container, ...c(className) }}>{children}</Text>
+);
 
 export default Subtitle;

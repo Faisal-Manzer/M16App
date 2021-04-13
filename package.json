@@ -4,15 +4,40 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
+    "clean": "watchman watch-del-all && cd android && ./gradlew clean && cd .. && find . -name 'node_modules' -type d -prune -exec rm -rf '{}' + && rm -rf ios/Pods",
     "ios": "react-native run-ios",
-    "xinstall": "yarn install && yarn pod",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "pod": "cd ios && pod install",
     "start": "react-native start",
     "studio": "studio android",
-    "xcode": "xed -b ios",
-    "pod": "cd ios && pod install",
     "test": "jest",
-    "clean": "watchman watch-del-all && cd android && ./gradlew clean && cd .. && find . -name 'node_modules' -type d -prune -exec rm -rf '{}' + && rm -rf ios/Pods",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "xcode": "xed -b ios",
+    "xinstall": "yarn install && yarn pod"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/!(node_modules)/*.{js,jsx,ts,tsx}": [
+      "pretty-quick —-staged",
+      "eslint --fix"
+    ]
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "preset": "react-native"
+  },
+  "resolutions": {
+    "@types/react": "^17"
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.10",
@@ -54,23 +79,11 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.23.2",
+    "husky": "^6.0.0",
     "jest": "^26.6.3",
+    "lint-staged": "^10.5.4",
     "metro-react-native-babel-preset": "^0.64.0",
     "react-test-renderer": "17.0.1",
     "typescript": "^3.8.3"
-  },
-  "resolutions": {
-    "@types/react": "^17"
-  },
-  "jest": {
-    "preset": "react-native",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ]
   }
 }

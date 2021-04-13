@@ -1,4 +1,4 @@
-import ScreenTitle from "./ScreenTitle";
-import Subtitle from "./Subtitle";
+import ScreenTitle from './ScreenTitle';
+import Subtitle from './Subtitle';
 
 export { ScreenTitle, Subtitle };

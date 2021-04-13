@@ -1,14 +1,14 @@
-import React from "react";
-import { StackNavigationProp } from "@react-navigation/stack";
-import { ImageBackground, StyleSheet } from "react-native";
+import React from 'react';
+import { StackNavigationProp } from '@react-navigation/stack';
+import { ImageBackground, StyleSheet } from 'react-native';
 
-import { RootStackParamList } from "interfaces/application";
-import { Screen } from "components/organisms";
-import { View, Button, RoundedButton } from "components/atoms";
-import { ScreenTitle, Subtitle } from "components/atoms/typography";
-import { TextInput } from "components/atoms/form";
+import { RootStackParamList } from 'interfaces/application';
+import { Screen } from 'components/organisms';
+import { View, RoundedButton } from 'components/atoms';
+import { ScreenTitle, Subtitle } from 'components/atoms/typography';
+import { TextInput } from 'components/atoms/form';
 
-type ProfileScreenNavigationProp = StackNavigationProp<RootStackParamList, "Home">;
+type ProfileScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Home'>;
 
 type Props = {
   navigation: ProfileScreenNavigationProp;
@@ -16,45 +16,39 @@ type Props = {
 
 const styles = StyleSheet.create({
   bgImage: {
-    width: "100%",
+    width: '100%',
     height: 200,
-    overflow: "hidden",
-    flex: 1
+    overflow: 'hidden',
+    flex: 1,
   },
   image: {
-    resizeMode: "cover",
+    resizeMode: 'cover',
     height: 200,
-    top: undefined
-  }
+    top: undefined,
+  },
 });
 
-const LoginScreenBG = require("assets/LoginScreenBG.png");
+const LoginScreenBG = require('assets/LoginScreenBG.png');
 
-const LoginScreen: React.FC<Props> = () => {
-  return (
-    <Screen>
-      <View className="flex-1" keyboard={true}>
-        <ImageBackground source={LoginScreenBG} style={styles.bgImage} imageStyle={styles.image}>
-          <View className="px-4 py-16 flex-1">
-            <ScreenTitle>
-              Hello!
-            </ScreenTitle>
-            <Subtitle>
-              Please enter your Phone No.
-            </Subtitle>
-            <View className="flex-row mt-8">
-              <TextInput className="w-12 mx-2" placeholder="+ 91" disabled={true} />
-              <TextInput className="flex-1" keyboardType="numeric" placeholder="Phone no." />
-            </View>
+const LoginScreen: React.FC<Props> = () => (
+  <Screen>
+    <View className='flex-1' keyboard>
+      <ImageBackground source={LoginScreenBG} style={styles.bgImage} imageStyle={styles.image}>
+        <View className='px-4 py-16 flex-1'>
+          <ScreenTitle>Hello!</ScreenTitle>
+          <Subtitle>Please enter your Phone No.</Subtitle>
+          <View className='flex-row mt-8'>
+            <TextInput className='w-12 mx-2' placeholder='+ 91' disabled />
+            <TextInput className='flex-1' keyboardType='numeric' placeholder='Phone no.' />
           </View>
-          <View className="m-4 flex-row">
-            <View className="flex-1" />
-            <RoundedButton icon="rocket" />
-          </View>
-        </ImageBackground>
-      </View>
-    </Screen>
-  );
-};
+        </View>
+        <View className='m-4 flex-row'>
+          <View className='flex-1' />
+          <RoundedButton icon='rocket' />
+        </View>
+      </ImageBackground>
+    </View>
+  </Screen>
+);
 
 export default LoginScreen;

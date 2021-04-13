@@ -1,25 +1,25 @@
-import React from "react";
-import "react-native-gesture-handler";
+import React from 'react';
+import 'react-native-gesture-handler';
 
-import { StatusBar } from "react-native";
-import Analytics from "appcenter-analytics";
-import AppCenter from "appcenter";
-import codePush from "react-native-code-push";
-import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
-import { Provider } from "react-redux";
+import { StatusBar } from 'react-native';
+import Analytics from 'appcenter-analytics';
+import AppCenter from 'appcenter';
+import codePush from 'react-native-code-push';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { Provider } from 'react-redux';
 
-import RNBootSplash from "react-native-bootsplash";
+import RNBootSplash from 'react-native-bootsplash';
 
-import { HomeScreen } from "./src/screens";
-import store from "./src/store";
+import { HomeScreen } from './src/screens';
+import store from './src/store';
 
 const Stack = createStackNavigator();
 
 const App = () => {
   React.useEffect(() => {
     RNBootSplash.hide({ fade: true });
-    Analytics.trackEvent("App Opened");
+    Analytics.trackEvent('App Opened');
     AppCenter.isEnabled().then((enabled) => console.log(`App center enabled: ${enabled}`));
   }, []);
 

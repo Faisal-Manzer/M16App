@@ -1,8 +1,8 @@
-import React from "react";
-import { TouchableOpacity } from "react-native";
+import React from 'react';
+import { TouchableOpacity } from 'react-native';
 
-import { c } from "helpers";
-import { ClassName } from "interfaces/application";
+import { c } from 'helpers';
+import { ClassName } from 'interfaces/application';
 
 export interface Props {
   onPress?: () => void;
@@ -10,15 +10,17 @@ export interface Props {
 }
 
 const styles = {
-  container: c("bg-app-light", "px-3", "py-1", "rounded-full")
+  container: c('bg-app-light', 'px-3', 'py-1', 'rounded-full'),
 };
 
-const Button: React.FC<Props> = ({ children, onPress, className = "" }) => {
-  return (
-    <TouchableOpacity activeOpacity={0.95} onPress={onPress} style={{ ...styles.container, ...c(className) }}>
-      {children}
-    </TouchableOpacity>
-  );
-};
+const Button: React.FC<Props> = ({ children, onPress, className = '' }) => (
+  <TouchableOpacity
+    activeOpacity={0.95}
+    onPress={onPress}
+    style={{ ...styles.container, ...c(className) }}
+  >
+    {children}
+  </TouchableOpacity>
+);
 
 export default Button;

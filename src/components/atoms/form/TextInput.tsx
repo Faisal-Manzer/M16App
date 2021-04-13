@@ -1,9 +1,9 @@
-import React, { useMemo, useState } from "react";
-import { TextInput as RNTextInput, TextInputProps } from "react-native";
+import React, { useMemo, useState } from 'react';
+import { TextInput as RNTextInput, TextInputProps } from 'react-native';
 
-import { c } from "helpers";
-import { getColor } from "helpers/tailwind";
-import { ClassName } from "interfaces/application";
+import { c } from 'helpers';
+import { getColor } from 'helpers/tailwind';
+import { ClassName } from 'interfaces/application';
 
 interface Props extends TextInputProps {
   className?: ClassName;
@@ -13,17 +13,27 @@ interface Props extends TextInputProps {
 }
 
 const styles = {
-  input: (focused: boolean, disabled: boolean) => c("text-xl", "py-2", "border-b-2", {
-    "border-app-light": focused && !disabled,
-    "border-gray-300": !focused && !disabled,
-    "border-gray-200": disabled,
-    "text-gray-500": disabled
-  })
+  input: (focused: boolean, disabled: boolean) =>
+    c('text-xl', 'py-2', 'border-b-2', {
+      'border-app-light': focused && !disabled,
+      'border-gray-300': !focused && !disabled,
+      'border-gray-200': disabled,
+      'text-gray-500': disabled,
+    }),
 };
 
-const TextInput: React.FC<Props> = ({ className = "", onFocus, onBlur, disabled = false, ...extra }) => {
+const TextInput: React.FC<Props> = ({
+  className = '',
+  onFocus,
+  onBlur,
+  disabled = false,
+  ...extra
+}) => {
   const [focused, setFocused] = useState(false);
-  const disabledProps = useMemo(() => (disabled ? { editable: false, selectTextOnFocus: false } : {}), [disabled]);
+  const disabledProps = useMemo(
+    () => (disabled ? { editable: false, selectTextOnFocus: false } : {}),
+    [disabled],
+  );
 
   const onFocusHandler = () => {
     setFocused(true);

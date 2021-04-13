@@ -1,8 +1,8 @@
-import React from "react";
-import { Text } from "react-native";
+import React from 'react';
+import { Text } from 'react-native';
 
-import { c } from "helpers";
-import { ClassName } from "interfaces/application";
+import { c } from 'helpers';
+import { ClassName } from 'interfaces/application';
 
 interface Props {
   onPress?: () => void;
@@ -10,15 +10,11 @@ interface Props {
 }
 
 const styles = {
-  container: c( "text-app", "text-4xl"),
+  container: c('text-app', 'text-4xl'),
 };
 
-const ScreenTitle: React.FC<Props> = ({ children, className = "" }) => {
-  return (
-    <Text style={{ ...styles.container, ...c(className) }}>
-      {children}
-    </Text>
-  );
-};
+const ScreenTitle: React.FC<Props> = ({ children, className = '' }) => (
+  <Text style={{ ...styles.container, ...c(className) }}>{children}</Text>
+);
 
 export default ScreenTitle;

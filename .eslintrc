@@ -62,7 +62,7 @@
     ],
     "indent": "warn",
     "no-unused-vars": "warn",
-    "no-param-reassign": "warn",
+    "no-param-reassign": "off",
     "no-async-promise-executor": "warn",
     "import/no-extraneous-dependencies": "off",
     "import/no-unresolved": "off",
@@ -84,4 +84,3 @@
     }
   }
 }
-  

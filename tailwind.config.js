@@ -7,13 +7,13 @@ module.exports = {
         app: {
           light: '#00bcd4',
           dark: '#22668c',
-          DEFAULT: '#22668c'
-        }
-      }
+          DEFAULT: '#22668c',
+        },
+      },
     },
   },
   variants: {
     extend: {},
   },
   plugins: [],
-}
+};
