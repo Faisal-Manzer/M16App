@@ -20,6 +20,7 @@ module.exports = {
           'screens': './src/screens',
           'components': './src/components',
           'interfaces': './src/interfaces',
+          'helpers': './src/helpers',
         },
       },
     ],
