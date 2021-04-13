@@ -63,5 +63,9 @@ ycMs6IwiMSE2uuhK1r64n6nHFXSAikDNhpinZafeYG0bf0BlBJL75/fRsh3RWbh9
 n12W5pnCXYJKz6QZJqJ0EfFK38o168hEXTIGmzOUK1YMJdc6KU3rJCWrVBOXAXCX
 SQIDAQAB
 -----END PUBLIC KEY-----</string>
+<key>UIAppFonts</key>
+    <array>
+      <string>Ionicons.ttf</string>
+    </array>
 </dict>
 </plist>

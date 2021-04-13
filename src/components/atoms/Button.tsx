@@ -4,7 +4,7 @@ import { TouchableOpacity } from "react-native";
 import { c } from "helpers";
 import { ClassName } from "interfaces/application";
 
-interface Props {
+export interface Props {
   onPress?: () => void;
   className?: ClassName;
 }

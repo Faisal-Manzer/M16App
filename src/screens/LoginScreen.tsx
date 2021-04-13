@@ -1,10 +1,10 @@
 import React from "react";
 import { StackNavigationProp } from "@react-navigation/stack";
-import { ImageBackground, StyleSheet, Text } from "react-native";
+import { ImageBackground, StyleSheet } from "react-native";
 
 import { RootStackParamList } from "interfaces/application";
 import { Screen } from "components/organisms";
-import { View } from "components/atoms";
+import { View, Button, RoundedButton } from "components/atoms";
 import { ScreenTitle, Subtitle } from "components/atoms/typography";
 import { TextInput } from "components/atoms/form";
 
@@ -43,9 +43,13 @@ const LoginScreen: React.FC<Props> = () => {
               Please enter your Phone No.
             </Subtitle>
             <View className="flex-row mt-8">
-              <TextInput className="w-12 mx-2" placeholder="+ 91" disabled={true} defaultValue="+ 91" />
-              <TextInput className="flex-1" keyboardType="numeric" />
+              <TextInput className="w-12 mx-2" placeholder="+ 91" disabled={true} />
+              <TextInput className="flex-1" keyboardType="numeric" placeholder="Phone no." />
             </View>
+          </View>
+          <View className="m-4 flex-row">
+            <View className="flex-1" />
+            <RoundedButton icon="rocket" />
           </View>
         </ImageBackground>
       </View>
