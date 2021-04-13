@@ -1,17 +1,12 @@
 import React from 'react';
-import { StackNavigationProp } from '@react-navigation/stack';
 import { useSelector, useDispatch } from 'react-redux';
-import { SafeAreaView, Text } from 'react-native';
-import { RootStackParamList, RootState } from 'interfaces/application';
+import { SafeAreaView } from 'react-native';
+import { RootState } from 'interfaces/application';
 
 import { increment } from 'store/counter';
 import { Button } from 'components/atoms';
 
-type ProfileScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Home'>;
-
-type Props = {
-  navigation: ProfileScreenNavigationProp;
-};
+type Props = {};
 
 const Counter: React.FC<Props> = () => {
   const count = useSelector((state: RootState) => state.counter.value);
@@ -19,13 +14,10 @@ const Counter: React.FC<Props> = () => {
 
   return (
     <SafeAreaView>
-      <Text>
-        Count:
-        {count}
-      </Text>
-      <Button onPress={() => dispatch(increment())}>
-        <Text>Increment</Text>
-      </Button>
+      <Button
+        onPress={() => dispatch(increment())}
+        title={`Touched ${count} time${count > 1 ? 's' : ''}`}
+      />
     </SafeAreaView>
   );
 };

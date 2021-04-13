@@ -1,4 +1,4 @@
-import store from 'store';
+import { store } from 'store';
 import { Argument } from 'classnames';
 
 export type RootStackParamList = {

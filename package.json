@@ -5,6 +5,7 @@
   "scripts": {
     "android": "react-native run-android",
     "clean": "watchman watch-del-all && cd android && ./gradlew clean && cd .. && find . -name 'node_modules' -type d -prune -exec rm -rf '{}' + && rm -rf ios/Pods",
+    "postinstall": "yarn pod",
     "ios": "react-native run-ios",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "pod": "cd ios && pod install",
@@ -40,6 +41,7 @@
     "@types/react": "^17"
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.15.2",
     "@react-native-community/masked-view": "^0.1.10",
     "@react-navigation/native": "^5.9.4",
     "@react-navigation/stack": "^5.14.4",
@@ -58,6 +60,7 @@
     "react-native-screens": "^3.0.0",
     "react-native-vector-icons": "^8.1.0",
     "react-redux": "^7.2.3",
+    "redux-persist": "^6.0.0",
     "tailwind-rn": "^3.0.1",
     "tailwindcss": "^2.1.1"
   },

@@ -4,6 +4,7 @@ import React from 'react';
 import { View } from 'components/atoms';
 import { Text } from 'components/atoms/typography';
 import { PatientImage } from 'screens/PatientInfo/PatientImage';
+import Counter from 'components/organisms/Counter';
 
 const PatientInfo: React.FC = () => (
   <Screen>
@@ -13,6 +14,9 @@ const PatientInfo: React.FC = () => (
         <PatientImage name='Farzan Manzer' image='https://picsum.photos/200/200' />
       </View>
       <View className='flex-1 p-4'>
+        <View className='my-4'>
+          <Counter />
+        </View>
         <View className='bg-white rounded-lg p-4 border border-gray-200'>
           <View className='flex-row'>
             <View>

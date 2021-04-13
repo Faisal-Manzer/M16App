@@ -1,11 +1,16 @@
 import React from 'react';
 import { Image } from 'react-native';
+import { StackNavigationProp } from '@react-navigation/stack';
 
+import { RootStackParamList } from 'interfaces/application';
 import { View } from 'components/atoms';
 import { Text } from 'components/atoms/typography';
 import { t } from 'helpers';
 
+type ProfileScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Home'>;
+
 interface Props {
+  navigation: ProfileScreenNavigationProp;
   active?: boolean;
   name: string;
   image: string;
