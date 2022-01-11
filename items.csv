@@ -1,0 +1,76 @@
+code,name,price
+G1,Gastroscopy/OGD,3000
+G2,Gastroscopy/OGD,2500
+G3,Gastroscopy-Emergency,4000
+G4,Gastroscopy with NBI,3500
+,,
+C1,Colonoscopy,5000
+C2,Colonoscopy,4300
+,,
+S1,Sigmoidoscopy,3500
+S2,Sigmoidoscopy,3000
+,,
+B1,Biopsy taking charge,500
+B2,Biopsy taking charge,600
+,,
+R,Rapid Urease Test(RUT) including kit,500
+,,
+SVE1,Side Viewing Endoscopy,4000
+SV2,Side Viewing Endoscopy,3300
+,,
+T1,Bedside Endoscopy Charges,5000
+T2,Biohazard charges,5000
+,,
+L1,Cook's Multiband Ligator,4500
+L2,Multiband Ligator,3500
+SN,Sclerotherapy Needle charge,2000
+ES1,SEMS-Esophageal,28000
+ES2,SEMS-Cook/Esophageal,45000
+ES3,SEMS-partially covered-Esophageal,22000
+,,
+P1,Procedure charge-Sclerotherapy/Adrenaline Injection,4000
+P2,Procedure charge-Band Ligation,2500
+P3,Procedure charge-Dual therapy,5500
+P4,Procedure charge-Fundal Varicel treatment,7000
+P5,Procedure charge-Polypectomy,5500
+P6,Procedure charge-Esophageal SEMS placement including fluro,14000
+,,
+N1,Endoscopy assisted Naso-Gastric(NG) tube placement,4500
+N2,Endoscopy assisted Naso-jejuna(NJ) tube placement,6000
+,,
+PEG1,PEG(Percutaneous Endoscopic Gastrostomy)including PEG kit and procedure charges,12000
+PEG2,PEG(Percutaneous Endoscopic Gastrostomy)including PEG kit and procedure charges,10000
+PEG3,PEG replacement tube exchange,4500
+,,
+FB1,Foreign Body(FB) removal-Procedure charge,7000
+FB2,Foreign Body(FB) removal-Procedure charge,5000
+,,
+BA,Bile aspiration,800
+,,
+F1,Fluoroscopy charges-3minute,1500
+F2,Fluoroscopy charges-3minute,2500
+,,
+D1,Dilatation charges-Savary Guillard(SG),7500
+D2,Dilatation charges-CRE(including balloon and procedure),18000
+D3,Dilatation charges-Achalasia(including balloon and procedure,30000
+,,
+E1,ERCP-Sphincterotomy/Diagnostic ,18000
+E2,ERCP-Diagnostic only ,12000
+E3,ERCP-Sphincterotomy/Stone extraction-Balloon,28000
+E4,ERCP-Sphincterotomy/Stone extraction-Balloon with plastic biliary stenting,30000
+E5,ERCP-Sphincterotomy/stone extraction-Basket,30000
+E6,ERCP-Sphincterotomy/stone extraction-Basket with plastic biliary stenting,31000
+E7,ERCP-Sphincterotomy with plastic biliary stenting,24000
+E8,ERCP-Sphincterotomy with biliary SEMS placement,
+,,
+,EVL,9500
+,EST,8500
+,,
+EM,Esophageal Manometry,7000
+AM,Anorectal Manometry,6000
+,OTHERS,
+M,Medical Certificate,50
+TD,Ascitic tap-Diagnostic,400
+TT,Ascitic tap-Therapeutic,1000
+F,Fibroscan,1000
+HBT,Hydrogen breath test,1000

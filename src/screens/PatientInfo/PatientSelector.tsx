@@ -1,22 +1,17 @@
 import React from 'react';
 import { Image } from 'react-native';
-import { StackNavigationProp } from '@react-navigation/stack';
 
-import { RootStackParamList } from 'interfaces/application';
 import { View } from 'components/atoms';
 import { Text } from 'components/atoms/typography';
 import { t } from 'helpers';
 
-type ProfileScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Home'>;
-
 interface Props {
-  navigation: ProfileScreenNavigationProp;
   active?: boolean;
   name: string;
   image: string;
 }
 
-export const PatientImage: React.FC<Props> = ({ active = false, name, image }) => (
+export const PatientSelector: React.FC<Props> = ({ active = false, name, image }) => (
   <View className={['p-2 mx-2 border-app-light items-center', { 'border-b-4': active }]}>
     <View
       className={[

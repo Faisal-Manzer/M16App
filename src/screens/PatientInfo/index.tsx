@@ -1,17 +1,25 @@
 import { Screen } from 'components/organisms';
 import React from 'react';
+import { StackNavigationProp } from '@react-navigation/stack';
 
+import { RootStackParamList } from 'interfaces/application';
 import { View } from 'components/atoms';
 import { Text } from 'components/atoms/typography';
-import { PatientImage } from 'screens/PatientInfo/PatientImage';
+import { PatientSelector } from 'screens/PatientInfo/PatientSelector';
 import Counter from 'components/organisms/Counter';
 
-const PatientInfo: React.FC = () => (
+type ProfileScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Home'>;
+
+interface Props {
+  navigation: ProfileScreenNavigationProp;
+}
+
+const PatientInfo: React.FC<Props> = () => (
   <Screen>
     <View className='bg-gray-100 flex-1'>
       <View className='px-4 flex-row bg-white border-b-2 border-gray-200'>
-        <PatientImage name='Faisal Manzer' image='https://picsum.photos/200/200' active />
-        <PatientImage name='Farzan Manzer' image='https://picsum.photos/200/200' />
+        <PatientSelector name='Faisal Manzer' image='https://picsum.photos/200/200' active />
+        <PatientSelector name='Farzan Manzer' image='https://picsum.photos/200/200' />
       </View>
       <View className='flex-1 p-4'>
         <View className='my-4'>
